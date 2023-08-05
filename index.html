@@ -14,11 +14,11 @@
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
-    <meta property="og:title" content="nvFrame: Decoding Illumination and Specularity over a Neural Volumetric Frame for High-Fidelity View Rendering">
+    <meta property="og:title" content="Decoding Illumination and Specularity over FiLMed Features for High-Fidelity  Rendering">
     <meta property="og:description" content="">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="nvFrame: Decoding Illumination and Specularity over a Neural Volumetric Frame for High-Fidelity View Rendering">
+    <meta name="twitter:title" content="Decoding Illumination and Specularity over FiLMed Features for High-Fidelity  Rendering">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
 
@@ -43,8 +43,7 @@
     <div class="container" id="header" style="text-align: center; margin: auto;">
         <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto; display: inline-block">
             <h2 class="col-md-12 text-center" id="title">
-                <b>nvFrame</b>: Decoding Illumination and Specularity over a Neural Volumetric
-                Frame <br>for High-Fidelity View Rendering<br>
+                Decoding Illumination and Specularity over FiLMed Features for High-Fidelity  Rendering<br>
                 <small>
            
                 </small>
@@ -56,7 +55,7 @@
                     <tr>
                         <td>
                             <a style="text-decoration:none" href="">
-                            Anonymous submission
+                            Author list
                             </a>
                             <br><br>
                         </td>
@@ -84,12 +83,6 @@
                                 <h4><strong>Video </strong></h4>
                             </a>
                         </li>                           
-                        <li>
-                            <a href="" target="_blank">
-                            <image src="img/github.png" height="60px">
-                                <h4><strong>Code (coming)</strong></h4>
-                            </a>
-                        </li>
                     </ul>
                 </div>
         </div>
@@ -102,7 +95,7 @@
                     <canvas height=0 class="videoMerge" id="materialsMerge"></canvas>
                 </div>
                 <p class="text-justify">
-                    Our results are shown on the left, and results of TensoRF are shown on the right.
+                    Our results are shown on the left, and the results of TensoRF are shown on the right.
                 </p>
 			</div>
         </div>
@@ -114,32 +107,7 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    Learning a scene into disentangled shape, appearance,
-                    and illumination, is a fundamental problem in computer
-                    vision and graphics. With recent advancements in dif-
-                    ferentiable volume rendering and coordinate-based neural
-                    scene representations, neural approaches such as Neural
-                    Radiance Fields (NeRF) have achieved remarkable perfor-
-                    mance. But existing NeRF and its followers fail to repro-
-                    duce high-quality rendering even very dense training views
-                    are given. Leveraging recent advancements in radiance
-                    fields reconstruction by vector-matrix (VM) decomposition,
-                    together with differentiable volume rendering approach that
-                    enables gradient-based optimization, we present a novel
-                    Neural Volumetric Frame (nvFrame) which jointly optimizes
-                    geometry, illumination, and texture from multi-view images
-                    observed under varying/same illuminations. In specific,
-                    nvFrame learns a set of compact neural basis which effec-
-                    tively spans the illumination and specular variation man-
-                    ifold observed in training views. The ray-casting direction
-                    and illumination input codes are effectively projected into
-                    a collective variational embedding space in which render-
-                    ing variations can be well decoded over the neural basis
-                    of nvFrame, which in turn facilitates the optimization of the basis interpretation and representation quality. Ex-
-                    periments show that our method can learn a single neural
-                    scene representation that renders novel views in varying or
-                    same illuminations and also achieves state-of-the-art per-
-                    formance on novel view synthesis.
+                  Learning effective scene representation for novel view synthesis has been a long-standing research issue. Leveraging recent advancements in radiance field reconstruction by vector-matrix (VM) decomposition, we present a novel pipeline that achieves state-of-the-art performance in synthesizing novel views of a scene captured in varying or same illuminations. Specifically, our method learns a set of feature-wise affine transformed (FiLMed) features that effectively span the illumination and specular variation manifold observed in training views. The ray-casting direction and illumination codes are effectively projected into a collective variational embedding space in which rendering variations can be well decoded over the FiLMed features, which in turn facilitates the optimization of the feature interpretation and representation quality. Experiments show that our method can learn a single neural scene representation that renders novel views in varying or the same illuminations.
                 </p>
             </div>
         </div>
@@ -155,18 +123,6 @@
 
 
 
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Introduction Video    
-                </h3>
-                <div class="text-center">
-                    <div style="position:relative">
-                        <iframe width="840" height="460" src="https://www.youtube-nocookie.com/embed/S8J5TV-iuOI?vq=hd1440" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
