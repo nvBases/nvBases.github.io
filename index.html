@@ -14,11 +14,11 @@
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
-    <meta property="og:title" content="Decoding Illumination and Specularity over Learned Neural Volumetric Bases for High-Fidelity View Rendering">
+    <meta property="og:title" content="Enhancing High-Fidelity Rendering: Cooperative Learning of Coefficient and Basis Decoding">
     <meta property="og:description" content="">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Decoding Illumination and Specularity over Learned Neural Volumetric Bases for High-Fidelity View Rendering">
+    <meta name="twitter:title" content="Enhancing High-Fidelity Rendering: Cooperative Learning of Coefficient and Basis Decoding">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
 
@@ -43,7 +43,7 @@
     <div class="container" id="header" style="text-align: center; margin: auto;">
         <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto; display: inline-block">
             <h2 class="col-md-12 text-center" id="title">
-                Decoding Illumination and Specularity over Learned Neural Volumetric Bases for High-Fidelity View Rendering<br>
+                Enhancing High-Fidelity Rendering: Cooperative Learning of Coefficient and Basis Decoding<br>
                 <small>
            
                 </small>
@@ -89,7 +89,10 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                  Learning effective scene representation for novel view synthesis has been a long-standing research issue. Leveraging recent advancements in radiance field reconstruction by vector-matrix (VM) decomposition, we present a novel pipeline that achieves state-of-the-art performance in synthesizing novel views of a scene captured in varying or same illuminations. Specifically, our method learns a set of feature-wise affine transformed (FiLMed) features that effectively span the illumination and specular variation manifold observed in training views. The ray-casting direction and illumination codes are effectively projected into a collective variational embedding space in which rendering variations can be well decoded over the FiLMed features, which in turn facilitates the optimization of the feature interpretation and representation quality. Experiments show that our method can learn a single neural scene representation that renders novel views in varying or the same illuminations.
+		Learning effective scene representation for novel view synthesis has been a long-standing research issue. In our work, we introduce a cooperative learning approach that jointly decodes coefficient and basis under varying illumination conditions. 
+Our methodology approximates the scene's geometry and appearance features as tensorial radiance fields, enabling the estimation of per-point features. The key variables in our model are illumination and viewing directions, identified as the primary factors influencing rendering outcomes. Initially, per-point appearance features undergo feature-wise linear modulation (FiLM) to transform into \textit{factors}-variant coefficients. These coefficients are adept at spanning the manifolds of illumination and viewing directions as observed in the training images. Simultaneously, a linear layer is used to convert the appearance features into a factors-invariant neural basis.
+Subsequently, these factors-variant coefficients and the factors-invariant neural basis are intricately blended using an MLP network, facilitating the production of high-fidelity rendering results.
+Our experimental findings demonstrate that this method successfully learns a singular neural scene representation capable of rendering novel views under diverse illuminations encountered during training, thereby achieving state-of-the-art quality in rendering.
                 </p>
             </div>
         </div>
@@ -99,7 +102,7 @@
                 <h3>
                     Pipeline
                 </h3>
-                <image src="img/architecture.png" class="img-responsive" alt="overview" width="80%" style="margin:auto;">
+                <image src="img/pipeline_12_12.png" class="img-responsive" alt="overview" width="80%" style="margin:auto;">
             </div>
         </div>
 
